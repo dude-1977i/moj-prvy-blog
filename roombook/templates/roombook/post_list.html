@@ -1,4 +1,13 @@
 <html>
     <p>Hi there!</p>
     <p>It works!</p>
+
+    <dl>
+       {% for room in rooms %}
+       <dt>{{ room.headline }} </dt>
+       {% for furniture in room.furnitures.all %}
+       <dd>{{ furniture.title }}</dd>
+       {% endfor %} 
+       {% endfor %}
+   </dl>
 </html>
